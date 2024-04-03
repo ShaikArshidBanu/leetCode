@@ -4,15 +4,15 @@ public:
         int n=nums.size();
         vector<int>left(n,1);
         vector<int>right(n,1);
-        vector<int> ans;
-        for(int i=1;i<n;i++){
+        vector<int>ans;
+        for(int i=1;i<nums.size();i++){
             left[i]=left[i-1]*nums[i-1];
         }
-        for(int i=n-2;i>=0;i--){
+        for(int i=nums.size()-2;i>=0;i--){
             right[i]=right[i+1]*nums[i+1];
         }
-        for(int i=0;i<n;i++){
-            ans.push_back(left[i]*right[i]);
+        for(int i=0;i<nums.size();i++){
+            ans.push_back(right[i]*left[i]);
         }
         return ans;
     }
