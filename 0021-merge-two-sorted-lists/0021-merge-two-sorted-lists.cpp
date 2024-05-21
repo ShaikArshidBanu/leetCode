@@ -17,7 +17,7 @@ public:
             if(list1->val<list2->val){
                 dummy->next=list1;
                 dummy=list1;
-                list1=list1->next;
+               list1= list1->next;
             }
             else{
                 dummy->next=list2;
@@ -27,7 +27,7 @@ public:
         }
         if(list1==NULL) dummy->next=list2;
         if(list2==NULL) dummy->next=list1;
+        
         return temp->next;
     }
-    
 };
