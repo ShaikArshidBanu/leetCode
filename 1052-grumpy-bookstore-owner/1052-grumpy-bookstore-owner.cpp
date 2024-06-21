@@ -31,7 +31,7 @@ public:
             if (grumpy[i - minutes] == 1) {
                 currentAdditionalSatisfaction -= customers[i - minutes];
             }
-            maxAdditionalSatisfaction = std::max(maxAdditionalSatisfaction, currentAdditionalSatisfaction);
+            maxAdditionalSatisfaction = max(maxAdditionalSatisfaction, currentAdditionalSatisfaction);
         }
         
         // Step 3: Combine the results
