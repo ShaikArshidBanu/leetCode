@@ -1,4 +1,5 @@
 class Solution {
+public:
     double solve(double x,int &n){
         double ans=1;
         long long power=n;
@@ -6,18 +7,15 @@ class Solution {
             power=-power;
             x=1/x;
         }
-     
-        while (power > 0) {
-            if (power % 2 == 1) {  
-                ans *= x;
+        while(power>0){
+            if(power%2==1){
+                ans*=x;
             }
-            x *= x;                
-            power /= 2;           
+            x*=x;
+            power/=2;
         }
-      
         return ans;
     }
-public:
     double myPow(double x, int n) {
         double ans=solve(x,n);
         return ans;
