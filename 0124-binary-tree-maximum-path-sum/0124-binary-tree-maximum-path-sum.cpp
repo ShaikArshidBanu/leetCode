@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    int max_down_path(TreeNode* root, int &ans){
+    int max_down_path(TreeNode* root,int &ans){
         if(root==nullptr) return 0;
         int l=max_down_path(root->left,ans);
         if(l<0) l=0;
